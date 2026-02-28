@@ -6,7 +6,7 @@ using namespace std;
 ========================================================
 Problem Name: Find All Duplicates in an Array
 Platform: LeetCode
-Problem Number: 442
+Problem Number: 442 
 ========================================================
 
 Problem Statement:
