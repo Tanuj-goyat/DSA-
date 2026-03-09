@@ -9,7 +9,7 @@ Platform: LeetCode
 Problem Number: 1047
 ========================================================
 
-Problem Statement:
+Problem Statement: 
 Given a string s, repeatedly remove adjacent duplicate 
 characters until no more duplicates remain.
 
