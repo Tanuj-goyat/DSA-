@@ -23,7 +23,7 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         int x;
-        cin >> x;
+        cin >> x; 
         arr.push_back(x);
     }
     vector<int> v;
