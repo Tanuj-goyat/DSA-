@@ -7,7 +7,7 @@ Problem: Count Pairs with Sum Less Than X
 Platform: codechef
 ========================================================
 
-Problem Statement:
+Problem Statement: 
 Given an array and an integer X, count the number of
 pairs (i, j) such that:
 
