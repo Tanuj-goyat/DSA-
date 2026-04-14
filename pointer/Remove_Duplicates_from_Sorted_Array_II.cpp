@@ -10,7 +10,7 @@ Platform: LeetCode
 Problem Number: 80
 ========================================================
 
-Problem Statement:
+Problem Statement: 
 Given a sorted array nums, remove duplicates in-place
 such that each element appears at most twice.
 
