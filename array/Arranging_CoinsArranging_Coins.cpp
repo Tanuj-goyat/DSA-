@@ -9,7 +9,7 @@ Problem Number: 441
 ========================================================
 
 Problem Statement:
-You have n coins and you want to build a staircase.
+You have n coins and you want to build a staircase. 
 
 - 1st row → 1 coin
 - 2nd row → 2 coins
