@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Sort Linked List of 0s, 1s and 2s
-Platform: Custom / GFG-style
+Platform: GFG-style
 ========================================================
 
 Problem Statement:
