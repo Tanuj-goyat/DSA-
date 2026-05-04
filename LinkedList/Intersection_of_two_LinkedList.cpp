@@ -59,8 +59,13 @@ public:
         while (temp1 != temp2) {
 
             // Move pointers
-            temp1 = (temp1 == NULL) ? h2 : temp1->next;
-            temp2 = (temp2 == NULL) ? h1 : temp2->next;
+            temp1 = temp1->next;
+            temp2 = temp2->next;
+
+            if(temp1 == temp2) return temp1;
+
+            if(!temp1) temp1 = h1;
+            if(!temp2) temp2 = h2;
         }
 
         // Either intersection node OR NULL
