@@ -15,7 +15,7 @@ right by k places.
 Example:
 Input:
 1 → 2 → 3 → 4 → 5, k = 2
-
+ 
 Output:
 4 → 5 → 1 → 2 → 3
 
