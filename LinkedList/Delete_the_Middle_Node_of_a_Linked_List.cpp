@@ -4,7 +4,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Delete the Middle Node of a Linked List
-Platform: LeetCode (2095)
+Platform: LeetCode 2095
 ========================================================
 
 Problem Statement:
