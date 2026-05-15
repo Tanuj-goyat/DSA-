@@ -5,8 +5,8 @@ using namespace std;
 
 /*
 ========================================================
-Problem: Maximum Subarray
-Platform: LeetCode (53)
+Problem: Maximum Subarray 
+Platform: LeetCode (53) 
 ========================================================
 
 Problem Statement:
