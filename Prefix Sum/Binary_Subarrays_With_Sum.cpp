@@ -6,7 +6,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Binary Subarrays With Sum
-Platform: LeetCode (930)
+Platform: LeetCode (930) 
 ========================================================
 
 Problem Statement:
