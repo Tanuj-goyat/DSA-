@@ -6,7 +6,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Longest Substring Without Repeating Characters
-Platform: LeetCode (3)
+Platform: LeetCode (3) 
 ========================================================
 
 Problem Statement:
