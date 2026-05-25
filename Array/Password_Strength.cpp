@@ -6,7 +6,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Password Strength
-Platform: LeetCode (3941)
+Platform: LeetCode (3941) 
 ========================================================
 
 Problem Statement:
