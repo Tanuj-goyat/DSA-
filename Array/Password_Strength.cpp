@@ -99,7 +99,7 @@ public:
                 ans += f(s[i]);
             }
 
-            m[s[i]]++;
+            m[s[i]]++; 
         }
 
         return ans;
