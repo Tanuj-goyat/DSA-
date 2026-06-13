@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Tatar TV Show
-Platform: Codeforces
+Platform: Codeforces (2236B)
 ========================================================
 
 Problem Statement:
