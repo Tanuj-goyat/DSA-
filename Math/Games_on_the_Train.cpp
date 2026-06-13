@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Games on the Train
-Platform: Codeforces
+Platform: Codeforces (2236A)
 ========================================================
 
 Problem Statement:
