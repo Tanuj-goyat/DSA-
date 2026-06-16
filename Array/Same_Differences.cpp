@@ -4,7 +4,7 @@ using namespace std;
 
 /*
 ========================================================
-Problem: Good Subarrays
+Problem: Same Differences
 Platform: Codeforces (1520D)
 ========================================================
 
