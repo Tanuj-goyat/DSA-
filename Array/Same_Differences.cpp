@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Same Differences
-Platform: Codeforces (1520D)
+Platform: Codeforces (1520D) 
 ========================================================
 
 Problem Statement:
