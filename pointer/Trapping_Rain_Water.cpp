@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <algorithm>
 using namespace std;
 
 /*
@@ -25,29 +23,39 @@ Output:
 6
 
 ========================================================
-Approach Used (Left Boundary + Right Boundary)
+Approach Used (Two Pointers)
 
 Step 1:
-Traverse from left to right and
-store the left boundary for each bar.
+Initialize two pointers:
+
+- Left pointer (i)
+- Right pointer (j)
 
 Step 2:
-Traverse from right to left and
-store the right boundary for each bar.
+Maintain:
+
+- imax -> Maximum height seen from left
+- jmax -> Maximum height seen from right
 
 Step 3:
-For every index,
-water trapped is:
-
-min(left, right) - height
-
-if the value is positive.
+Move the pointer whose maximum height
+is smaller.
 
 Step 4:
-Sum the trapped water over all indices.
+If the current height is smaller than
+the corresponding maximum,
+water trapped is:
+
+maximum - current height
+
+Otherwise,
+update the maximum.
+
+Step 5:
+Continue until both pointers meet.
 
 Time Complexity: O(n)
-Space Complexity: O(n)
+Space Complexity: O(1)
 
 ========================================================
 */
@@ -57,65 +65,46 @@ public:
 
     int trap(vector<int>& arr) {
 
-        int n = arr.size();
+        int imax = 0;
 
-        vector<int> left;
+        int jmax = 0;
 
-        stack<int> st1;
+        int i = 0;
 
-        for (int i = 0; i < n; i++) {
-
-            if (st1.empty()) {
-
-                st1.push(arr[i]);
-
-                left.push_back(-1);
-            }
-
-            else if (st1.top() > arr[i]) {
-
-                left.push_back(st1.top());
-            }
-
-            else if (st1.top() <= arr[i]) {
-
-                st1.push(arr[i]);
-
-                left.push_back(-1);
-            }
-        }
-
-        stack<int> st2;
-
-        vector<int> right(n, 0);
-
-        for (int i = n - 1; i >= 0; i--) {
-
-            if (st2.empty()) {
-
-                st2.push(arr[i]);
-
-                right[i] = -1;
-            }
-
-            else if (st2.top() > arr[i]) {
-
-                right[i] = st2.top();
-            }
-
-            else if (st2.top() <= arr[i]) {
-
-                st2.push(arr[i]);
-
-                right[i] = -1;
-            }
-        }
+        int j = arr.size() - 1;
 
         int count = 0;
 
-        for (int i = 0; i < n; i++) {
+        while (i <= j) {
 
-            count += max(0, min(left[i], right[i]) - arr[i]);
+            if (imax <= jmax) {
+
+                if (arr[i] >= imax) {
+
+                    imax = arr[i];
+                }
+
+                else {
+
+                    count += imax - arr[i];
+                }
+
+                i++;
+            }
+
+            else {
+
+                if (arr[j] >= jmax) {
+
+                    jmax = arr[j];
+                }
+
+                else {
+                    count += jmax - arr[j];
+                }
+
+                j--;
+            }
         }
 
         return count;
