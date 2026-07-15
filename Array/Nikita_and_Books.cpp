@@ -4,8 +4,8 @@ using namespace std;
 
 /*
 ========================================================
-Problem: Iskander and Drawings
-Platform: Codeforces 2244A
+Problem: Nikita and Books
+Platform: Codeforces 2244B
 ========================================================
 
 Problem Statement:
