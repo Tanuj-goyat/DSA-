@@ -12,7 +12,7 @@ Given two integers:
 
 n
 k
-
+ 
 Determine whether n can be represented
 as the sum of exactly k positive integers
 having the same parity.
