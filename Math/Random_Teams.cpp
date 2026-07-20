@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 ========================================================
-Problem: Mafia
+Problem: Random Teams
 Platform: Codeforces (478B)
 ========================================================
 
