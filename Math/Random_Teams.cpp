@@ -6,7 +6,7 @@ using namespace std;
 Problem: Random Teams
 Platform: Codeforces (478B)
 ========================================================
-
+ 
 Problem Statement:
 There are n people to be divided into
 m groups.
