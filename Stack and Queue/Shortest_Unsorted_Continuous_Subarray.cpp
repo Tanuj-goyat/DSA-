@@ -6,7 +6,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Shortest Unsorted Continuous Subarray
-Platform: LeetCode (581)
+Platform: LeetCode (581) 
 ========================================================
 
 Problem Statement:
