@@ -6,7 +6,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Next Greater Element II
-Platform: LeetCode (503)
+Platform: LeetCode (503) 
 ========================================================
 
 Problem Statement:
