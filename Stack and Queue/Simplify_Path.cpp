@@ -8,7 +8,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Simplify Path
-Platform: LeetCode (71)
+Platform: LeetCode (71) 
 ========================================================
 
 Problem Statement:
