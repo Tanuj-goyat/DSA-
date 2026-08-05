@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: Count Indices with Opposite Parity
-Platform: LeetCode (3917)
+Platform: LeetCode (3917) 
 ========================================================
 
 Problem Statement:
