@@ -9,7 +9,7 @@ Platform: LeetCode 3345
 
 Problem Statement:
 Given two integers:
-
+ 
 - n
 - t
 
