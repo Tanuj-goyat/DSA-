@@ -14,7 +14,7 @@
  *    and an unordered_map `m` to track the frequencies of elements inside it.
  * 2. We expand our window by moving `j` to the right and adding `nums[j]`
  *    to our map.
- * 3. If adding `nums[j]` causes its frequency to exceed `k`, our window
+ * 3. If adding `nums[j]` causes its frequency to exceed `k`, our window 
  *    becomes invalid.
  * 4. To fix this, we shrink the window from the left by moving `i` forward.
  *    We decrement the frequency of `nums[i]` until `nums[i] == nums[j]`,
