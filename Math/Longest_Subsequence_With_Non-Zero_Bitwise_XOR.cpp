@@ -9,7 +9,7 @@
  * exists, return 0.
  *
  * Approach Used: Bit Manipulation & Logical Deduction
- * 1. Calculate the XOR sum of all elements in the array.
+ * 1. Calculate the XOR sum of all elements in the array. 
  * 2. If the total XOR sum is NOT 0, the longest valid subsequence is the
  *    entire array itself (length `n`).
  * 3. If the total XOR sum IS 0, we check if there is at least one non-zero
