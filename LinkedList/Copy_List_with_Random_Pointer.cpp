@@ -11,7 +11,7 @@ Platform: LeetCode (138)
 Problem Statement:
 Given a linked list where each node contains:
 - next pointer
-- random pointer
+- random pointer 
 
 Create a deep copy of the list.
 
