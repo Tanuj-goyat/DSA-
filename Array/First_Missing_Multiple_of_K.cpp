@@ -3,7 +3,7 @@
  * Problem: First Missing Multiple of K (3718)
  * ============================================================================
  *
- * Problem Statement:
+ * Problem Statement: 
  * Given an integer array `nums` and an integer `k`, find the smallest positive
  * multiple of `k` that is missing from the array.
  *
