@@ -8,24 +8,22 @@
  * A height-balanced binary tree is defined as a binary tree in which the left
  * and right subtrees of every node differ in height by no more than 1.
  *
- * Approach Used: Top-Down Recursion
- * 1. We use a helper function `len(root)` that calculates the maximum depth
- *    (height) of a given subtree.
- * 2. In the main `isBalanced` function, we first handle the base case: an
- *    empty tree is always balanced.
- * 3. We calculate the height of the left subtree (`l`) and right subtree (`r`).
- * 4. If the absolute difference between `l` and `r` is strictly greater than 1,
- *    the tree is not balanced at this current node, so we return false.
- * 5. If the current node is balanced, we recursively call `isBalanced` on both
- *    the left and right children to ensure every single node in the tree also
- *    satisfies the height-balance property.
+ * Approach Used: Bottom-Up Recursion (Optimized)
+ * 1. We use a helper function `len(root)` that calculates the height of the
+ *    tree, but with a twist: it returns -1 if the tree is unbalanced.
+ * 2. We recursively find the height of the left (`lh`) and right (`rh`) subtrees.
+ * 3. If either subtree returns -1, it means an imbalance was found deeper in
+ *    the tree. We immediately propagate this -1 upwards.
+ * 4. We also check the current node: if the absolute difference between `lh`
+ *    and `rh` is greater than 1, the current node is unbalanced, so we return -1.
+ * 5. If it is balanced, we return its actual height: `1 + max(lh, rh)`.
+ * 6. Finally, `isBalanced` just checks if the total height returned is -1.
  *
  * Complexity:
- * - Time Complexity: O(N^2) in the worst case -> For every node, we traverse
- *   its descendants to calculate the height. In a perfectly balanced tree,
- *   this is O(N log N), but in a skewed tree, it degrades to O(N^2).
- * - Space Complexity: O(N) -> The recursion call stack can go as deep as the
- *   height of the tree, which is O(N) in the worst case (skewed tree).
+ * - Time Complexity: O(N) -> We visit each node exactly once in a bottom-up
+ *   fashion, completely avoiding the repeated work of the top-down approach.
+ * - Space Complexity: O(H) -> Where H is the height of the tree. This accounts
+ *   for the recursion call stack. In the worst case (skewed tree), it's O(N).
  * ============================================================================
  */
 
@@ -49,41 +47,35 @@ struct TreeNode
 class Solution
 {
 public:
-    // Helper function to calculate the maximum depth (height) of a subtree
+    // Helper function that returns the height of the tree,
+    // or -1 if the tree is unbalanced at any point.
     int len(TreeNode *root)
     {
         if (!root)
-            return 0; // Base case: empty node has height 0
+            return 0; // Base case: height of empty tree is 0
 
-        int lef = len(root->left); // Height of left subtree
-        int rh = len(root->right); // Height of right subtree
+        int lh = len(root->left);  // Get left subtree height
+        int rh = len(root->right); // Get right subtree height
 
-        return 1 + max(lef, rh); // Current height is 1 + max of children's heights
+        // If left is unbalanced, right is unbalanced, or the current node is unbalanced
+        if (lh == -1 || rh == -1 || abs(lh - rh) > 1)
+        {
+            return -1; // Propagate the unbalanced signal upwards
+        }
+
+        // If balanced, return the actual height of this subtree
+        return 1 + max(lh, rh);
     }
 
     // Main function to check if the tree is balanced
     bool isBalanced(TreeNode *root)
     {
-        if (!root)
-            return true; // Base case: an empty tree is balanced
+        int ans = len(root);
 
-        // Step 1: Get the height of the left and right subtrees
-        int l = len(root->left);
-        int r = len(root->right);
-
-        // Step 2: Check if the current node violates the balance condition
-        if (abs(l - r) > 1)
+        // If our helper function returned -1, an imbalance was found
+        if (ans == -1)
             return false;
 
-        // Step 3: Recursively check if the left and right subtrees are balanced
-        bool lef = isBalanced(root->left);
-        bool rh = isBalanced(root->right);
-
-        // If either subtree is unbalanced, the whole tree is unbalanced
-        if (!lef || !rh)
-            return false;
-
-        // If we passed all checks, the tree rooted at this node is balanced
         return true;
     }
 };
