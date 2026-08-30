@@ -58,7 +58,7 @@ public:
         {
             int freq = m[nums[i]]; // Total occurrences of the current number in the entire array
             int j = i;
-            int currCount = 0;
+            int currCount = 0; 
 
             // Move 'j' forward as long as it matches the element at 'i'
             while (j < n && nums[j] == nums[i])
