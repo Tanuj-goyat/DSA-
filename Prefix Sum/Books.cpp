@@ -12,7 +12,7 @@ Problem Statement:
 There are n books.
 
 The i-th book takes time[i] minutes
-to read.
+to read. 
 
 You have only t minutes available.
 
