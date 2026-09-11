@@ -15,7 +15,7 @@ between the hour hand and minute hand.
 
 Example:
 Input:
-hour = 3
+hour = 3 
 minutes = 30
 
 Output:
