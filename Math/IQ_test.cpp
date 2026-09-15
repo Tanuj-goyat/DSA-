@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem: IQ Test
-Platform: Codeforces (25A)
+Platform: Codeforces (25A) 
 ========================================================
 
 Problem Statement:
