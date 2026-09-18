@@ -5,7 +5,7 @@ using namespace std;
 /*
 ========================================================
 Problem:  Pashmak and Flowers
-Platform: Codeforces (459B)
+Platform: Codeforces (459B) 
 ========================================================
 
 Problem Statement:
